@@ -1,0 +1,79 @@
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  html { font-size: 17px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 14px; }
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+  color: #D30B26;
+  font-family: 'Pacifico', cursive;
+  font-size: 5rem;
+  padding-left: 20px;
+}
+
+footer {
+  margin: 50px auto;
+}
+
+.wrapper {
+  margin: 0 auto;
+  text-align: center;
+  width: 45%;
+}
+
+.court {
+  text-align: center;
+}
+
+.mid-court {/*
+  background: lightgreen;*/
+  display: block;
+  height: 80px;
+}
+
+.mid-court.empty {
+  height: 40px;
+}
+
+.bball {
+  background: #FF7A12 url("../images/fb-basketball.png") no-repeat center center;
+  background-size: 99%;
+  border-radius: 50px;
+  display: block;
+  height: 75px;
+  margin: 0 auto;
+  width: 75px;
+}
+
+.key > p,
+.mid-court > p {
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+.not-yet {
+  display: none;
+}
+
+.bhoop {
+  background: #fff;
+  border: 2px solid #1298FF;
+  border-radius: 50px;
+  display: block;
+  height: 80px;
+  margin: 30px auto;
+  width: 80px;
+}
+
+.bhoop .bball {
+  margin: 2px auto;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/ball.css" />
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <title>hoop!</title>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <header>
+    <h1>hoop!</h1>
+  </header>
+
+  <section class="court">
+    <div class="key">
+      <p class="not-yet" id="announcer">swish!</p>
+      <div class="bhoop" id="hoop" draggable="true" ondrop="dropInTheHoop(event)" ondragover="allowDrops(event)"></div>
+    </div>
+    
+    <div class="mid-court" id="midcourt" draggable="true" ondrop="dropOnTheBench(event)" ondragover="allowDrops(event)">
+      <p class="not-yet" id="report">back on the bench</p>
+      <div class="bball" id="ball" draggable="true" ondragstart="dragging(event)"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="https://github.com/dotsara/hoop">hoop!</a> was made by <a href="https://github.com/dotsara">dotsara</a> in the off-season.</p>
+  </footer>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="javascript/hoop.js"></script>
+</body>
+</html>
