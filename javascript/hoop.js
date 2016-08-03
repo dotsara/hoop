@@ -1,8 +1,25 @@
 "use strict";
 
+var ball = document.getElementById("ball");
 var announcer = document.getElementById("announcer");
 var report = document.getElementById("report");
 var midcourt = document.getElementById("midcourt");
+
+
+ball.addEventListener("touchstart", movingTheBall, false);
+
+function movingTheBall(event) {
+  // just touching the ball removes the class to show the text here
+  announcer.classList.remove("not-yet");
+}
+
+function ready(fn) {
+  if (document.readyState != 'loading'){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
 
 function allowDrops(event) {
   console.log("allowing drops");
@@ -47,3 +64,13 @@ function dropOnTheBench(event) {
   report.classList.remove("not-yet");
   midcourt.classList.remove("empty");
 }
+
+ready(function (){
+  console.log("hello! we are ready!");
+
+  // attempting to prevent scrolling on touch devices
+  document.body.addEventListener('touchmove', function(event) {
+    event.preventDefault();
+  }, false); 
+
+});
